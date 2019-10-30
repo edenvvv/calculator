@@ -34,5 +34,10 @@ The function divides two numbers
 
 
 def div(num1, num2):
-    result = num1 / num2
-    return result
+    try:
+        result = num1 / num2
+        return result
+        # Cases of exception
+    except ZeroDivisionError as zero:
+        print("Incorrect input ,Can not divide by 0 ,try again")
+        raise zero
